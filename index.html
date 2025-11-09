@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Share Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Community Resource Sharing Platform</h1>
+        <p>Simple Web Demo UI calling the Spring Boot API (running on port 8080)</p>
+    </header>
+
+    <main>
+        <section id="login-section">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username (e.g., user)">
+            <input type="password" id="password" placeholder="Password (e.g., password)">
+            <button onclick="handleLogin()">Login</button>
+            <p id="login-message"></p>
+        </section>
+
+        <section id="dashboard-section" style="display:none;">
+            <h2>Available Resources</h2>
+            <button onclick="fetchResources()">Refresh Resources</button>
+            <div id="resource-list">
+                </div>
+            <p id="status-message"></p>
+        </section>
+    </main>
+    
+    <script src="app.js"></script>
+</body>
+</html>
